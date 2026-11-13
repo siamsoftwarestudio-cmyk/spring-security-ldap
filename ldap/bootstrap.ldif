@@ -1,0 +1,37 @@
+dn: ou=people,dc=company,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=company,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=ivan,ou=people,dc=company,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Ivan Petrov
+sn: Petrov
+uid: ivan
+userPassword: $2a$10$E49Jyan1oMC6qggT18Bq5u7g188yAq7Vf4hcR4gr/1oZ2rp1yBLrK
+
+dn: uid=admin,ou=people,dc=company,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+cn: Demo Admin
+sn: Admin
+uid: admin
+userPassword: $2a$10$ym2XVMPQlQylwq8Tq9ppGOfjrPcWqYPsdd6905V0/MDOxQyG5okC2
+
+dn: cn=developers,ou=groups,dc=company,dc=com
+objectClass: groupOfNames
+cn: developers
+member: uid=ivan,ou=people,dc=company,dc=com
+
+dn: cn=admins,ou=groups,dc=company,dc=com
+objectClass: groupOfNames
+cn: admins
+member: uid=admin,ou=people,dc=company,dc=com
